@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Delek Children's Foundation`,
+    description: `Delek Children’s Foundation is a charitable non-profit organization dedicated to providing children in need with an education and healthcare throughout the Himalayan region of India, Nepal, Bhutan and Tibet, irrespective of their ethnicity and national boundaries.`,
+    author: `@debelopumento`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

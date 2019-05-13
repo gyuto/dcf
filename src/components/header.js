@@ -1,18 +1,20 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import * as colors from "../styles/colors"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: colors.brand,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
+        textAlign: "center",
         margin: `0 auto`,
-        maxWidth: 960,
+        // maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
@@ -20,7 +22,8 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: colors.white,
+            // color: colors.brand,
             textDecoration: `none`,
           }}
         >

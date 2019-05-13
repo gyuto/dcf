@@ -1,7 +1,10 @@
+import { Carousel } from "react-responsive-carousel"
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import cover from "../../images/cover.jpg"
+import cover2 from "../../images/cover2.jpg"
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -14,19 +17,15 @@ import Img from "gatsby-image"
  */
 
 const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "cover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
+  <Carousel>
+    <div>
+      <img src={cover} />
+      <p className="legend">Legend 1</p>
+    </div>
+    <div>
+      <img src={cover2} />
+      <p className="legend">Legend 2</p>
+    </div>
+  </Carousel>
 )
 export default Image
