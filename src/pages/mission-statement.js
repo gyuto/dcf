@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Article from "../components/article"
 import SEO from "../components/seo"
 
+export const abc = "abc"
+
 const SecondPage = () => (
   <Layout>
     <SEO title="Mission statement" />

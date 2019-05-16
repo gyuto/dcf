@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import Carousel from "../components/carousel"
 import SEO from "../components/seo"
+import AnyPreview from "any-cra"
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,9 @@ const IndexPage = () => (
     >
       <Carousel />
     </div>
+
+    <AnyPreview />
+
     <Link to="/mission-statement/">Go to page 2</Link>
   </Layout>
 )
