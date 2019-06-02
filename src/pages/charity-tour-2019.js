@@ -24,7 +24,7 @@ export const content = {
   },
 }
 
-const SecondPage = () => (
+const Page = () => (
   <Layout>
     <SEO title={content.title} />
     <Article content={content}>
@@ -33,4 +33,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page

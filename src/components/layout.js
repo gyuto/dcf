@@ -43,12 +43,20 @@ const Layout = ({ children }) => (
           <main>{children}</main>
           <footer
             style={{
+              marginTop: 30,
               textAlign: "center",
+              fontSize: 14,
             }}
           >
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()},{` `}
+            <a
+              href="/"
+              style={{
+                color: "#666",
+              }}
+            >
+              Delek Children's Foundation
+            </a>
           </footer>
         </div>
       </>
