@@ -1,17 +1,17 @@
 import { Link } from "gatsby"
+import * as R from "ramda"
 import PropTypes from "prop-types"
 import React from "react"
 import * as colors from "../styles/colors"
 
 const Article = ({ children, content }) => {
-  console.log(404040, content)
   return (
     <div
       style={{
         marginTop: 30,
       }}
     >
-      {content.pic && content.pic.banner && (
+      {R.path(["pic", "banner"], content) && (
         <div
           style={{
             width: "100%",
@@ -29,7 +29,7 @@ const Article = ({ children, content }) => {
         }}
       >
         <h1>{content.title}</h1>
-        {content.pic.title && (
+        {R.path(["pic", "title"], content) && (
           <img
             style={{
               width: 960,
