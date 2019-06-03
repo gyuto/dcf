@@ -10,9 +10,7 @@ const Page = () => {
   return (
     <Layout>
       <SEO title="Sponsor underprivileged children" />
-      <Article content={content}>
-        <Link to="/">Go back to the homepage</Link>
-      </Article>
+      <Article content={content} />
     </Layout>
   )
 }

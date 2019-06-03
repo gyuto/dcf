@@ -10,9 +10,7 @@ const Page = () => {
   return (
     <Layout>
       <SEO title="Mission statement" />
-      <Article content={content}>
-        <Link to="/">Go back to the homepage</Link>
-      </Article>
+      <Article content={content} />
     </Layout>
   )
 }

@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
 import * as R from "ramda"
 import PropTypes from "prop-types"
 import React from "react"
 import * as colors from "../styles/colors"
+import getImage from "../images/get-image"
 
 const Article = ({ children, content }) => {
   return (
@@ -16,7 +16,7 @@ const Article = ({ children, content }) => {
           style={{
             width: "100%",
             height: 300,
-            backgroundImage: `url(${content.pic.banner})`,
+            backgroundImage: `url(${getImage(content.pic.banner)})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -30,12 +30,17 @@ const Article = ({ children, content }) => {
       >
         <h1>{content.title}</h1>
         {R.path(["pic", "title"], content) && (
-          <img
+          <div
             style={{
-              width: 960,
+              width: "100%",
+              minHeight: 300,
+              backgroundImage: `url(${getImage(
+                R.path(["pic", "title"], content)
+              )})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              margin: "50px 0",
             }}
-            src={content.pic.title}
-            alt={content.title}
           />
         )}
         <p>{content.main}</p>
