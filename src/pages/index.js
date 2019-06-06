@@ -3,7 +3,7 @@ import * as R from "ramda"
 import Layout from "../components/layout"
 import Carousel from "../components/carousel"
 import SEO from "../components/seo"
-import AnyPreview from "any-preview"
+import Preview from "../components/article-preview"
 import getImage from "../images/get-image"
 
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
@@ -29,7 +29,7 @@ const IndexPage = () => (
       <Carousel />
     </div>
 
-    <AnyPreview
+    <Preview
       content={[
         format(contentCharityTour),
         format(contentMissionStatement),
