@@ -14,6 +14,7 @@ const menu = [
   },
   {
     text: "Programs",
+    link: "/vocational-programs",
   },
   {
     text: "Support us",
