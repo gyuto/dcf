@@ -3,8 +3,27 @@ import styled, { css } from "styled-components"
 import PropTypes from "prop-types"
 import React from "react"
 
-const MenuButton = styled.h4`
-  color: palevioletred;
+const menu = [
+  {
+    text: "Home",
+    link: "/",
+  },
+  {
+    text: "About us",
+    link: "/mission-statement",
+  },
+  {
+    text: "Programs",
+  },
+  {
+    text: "Support us",
+  },
+  {
+    text: "Gallery",
+  },
+]
+
+const MenuButton = styled.a`
   margin: 0 1em;
   padding: 0.25em 1em;
 `
@@ -16,11 +35,25 @@ const Menu = ({ siteTitle }) => (
       justifyContent: "center",
     }}
   >
-    <MenuButton>Home</MenuButton>
-    <MenuButton>About us</MenuButton>
-    <MenuButton>Programs</MenuButton>
-    <MenuButton>Support us</MenuButton>
-    <MenuButton>Gallery</MenuButton>
+    {menu.map(m => {
+      return (
+        <MenuButton key={m.text}>
+          {m.link ? (
+            <a key={m.text} href={m.link}>
+              {m.text}
+            </a>
+          ) : (
+            <div
+              style={{
+                color: "#BBB",
+              }}
+            >
+              {m.text}
+            </div>
+          )}
+        </MenuButton>
+      )
+    })}
   </div>
 )
 
