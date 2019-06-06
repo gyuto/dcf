@@ -5,7 +5,7 @@ import React from "react"
 
 const menu = [
   {
-    text: "Home",
+    text: "Hom232232e",
     link: "/",
   },
   {

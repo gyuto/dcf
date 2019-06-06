@@ -1,5 +1,4 @@
 import React from "react"
-import * as R from "ramda"
 import LinesEllipsis from "react-lines-ellipsis"
 
 const Block = ({ content, defaultPreviewPic }) => {
@@ -19,11 +18,11 @@ const Block = ({ content, defaultPreviewPic }) => {
         style={{
           width: "100%",
           height: 200,
-          backgroundImage: `url(${R.pathOr(
-            defaultPreviewPic,
-            ["pic", "title"],
-            content
-          )}`,
+          backgroundImage: `url(${
+            content.pic && content.pic.title
+              ? content.pic.title
+              : defaultPreviewPic
+          })`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
