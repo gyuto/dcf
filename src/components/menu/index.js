@@ -1,11 +1,9 @@
-import { Link } from "gatsby"
-import styled, { css } from "styled-components"
 import PropTypes from "prop-types"
 import React from "react"
 
 const menu = [
   {
-    text: "Hom232232e",
+    text: "Home",
     link: "/",
   },
   {
@@ -24,11 +22,6 @@ const menu = [
   },
 ]
 
-const MenuButton = styled.a`
-  margin: 0 1em;
-  padding: 0.25em 1em;
-`
-
 const Menu = ({ siteTitle }) => (
   <div
     style={{
@@ -38,7 +31,12 @@ const Menu = ({ siteTitle }) => (
   >
     {menu.map(m => {
       return (
-        <MenuButton key={m.text}>
+        <div
+          key={m.text}
+          style={{
+            margin: "0 35px",
+          }}
+        >
           {m.link ? (
             <a key={m.text} href={m.link}>
               {m.text}
@@ -52,7 +50,7 @@ const Menu = ({ siteTitle }) => (
               {m.text}
             </div>
           )}
-        </MenuButton>
+        </div>
       )
     })}
   </div>
