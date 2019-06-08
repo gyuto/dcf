@@ -3,12 +3,17 @@ import {
   faYoutube,
   faTwitter,
   faVimeo,
+  faFacebookMessenger,
 } from "@fortawesome/free-brands-svg-icons"
 
 export default [
   {
     icon: faFacebook,
     link: "https://www.facebook.com/Delek-Childrens-Foundation-413781628796613",
+  },
+  {
+    icon: faFacebookMessenger,
+    link: "https://www.messenger.com/t/thupten.donyo",
   },
   {
     icon: faYoutube,
