@@ -5,7 +5,9 @@ import Carousel from "../components/carousel"
 import SEO from "../components/seo"
 import Preview from "../components/article-preview"
 import getImage from "../images/get-image"
+import Connect from "../components/connect"
 
+import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
 import contentMissionStatement from "../content/articles/mission-statement.json"
 import contentSponsorUnderprivilegedChildren from "../content/articles/sponsor-underprivileged-children.json"
@@ -41,6 +43,8 @@ const IndexPage = () => (
     />
 
     {/* <Link to="/mission-statement/">Go to page 2</Link> */}
+    {/* <Newsletter /> */}
+    <Connect content={connectContent} />
   </Layout>
 )
 
