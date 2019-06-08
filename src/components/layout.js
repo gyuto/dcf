@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Menu from "./menu"
 import "./layout.css"
-
+import menuContent from "./menu/content"
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Menu />
+        <Menu content={menuContent} />
         <div
           style={{
             height: 30,

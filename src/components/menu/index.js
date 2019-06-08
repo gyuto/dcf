@@ -1,70 +1,38 @@
-import PropTypes from "prop-types"
 import React from "react"
+import Button from "./button"
 
-const menu = [
-  {
-    text: "Home",
-    link: "/",
-  },
-  {
-    text: "About us",
-    link: "/mission-statement",
-  },
-  {
-    text: "Programs",
-    link: "/vocational-programs",
-  },
-  {
-    text: "Support us",
-    link: "/support-us",
-  },
-  {
-    text: "Gallery",
-    link:
-      "https://www.facebook.com/pg/Delek-Childrens-Foundation-413781628796613/photos/?ref=page_internal",
-  },
-]
-
-const Menu = ({ siteTitle }) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-    }}
-  >
-    {menu.map(m => {
-      return (
-        <div
-          key={m.text}
-          style={{
-            margin: "0 35px",
-          }}
-        >
-          {m.link ? (
-            <a key={m.text} href={m.link}>
-              {m.text}
-            </a>
-          ) : (
-            <div
-              style={{
-                color: "#BBB",
-              }}
-            >
-              {m.text}
-            </div>
-          )}
-        </div>
-      )
-    })}
-  </div>
-)
-
-Menu.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Menu.defaultProps = {
-  siteTitle: ``,
+const Menu = ({ content }) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      {content.map(m => {
+        return (
+          <div
+            key={m.text}
+            style={{
+              margin: "0 15px",
+            }}
+          >
+            {m.link || m.children ? (
+              <Button content={m} key={m.text} />
+            ) : (
+              <div
+                style={{
+                  color: "#BBB",
+                }}
+              >
+                {m.text}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default Menu
