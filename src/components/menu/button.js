@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import * as colors from "../../styles/colors"
 
 const Button = ({ content }) => {
   const [mouseOverRootButton, toggleRootButtonState] = useState(false)
@@ -39,7 +40,7 @@ const Button = ({ content }) => {
               width: 220,
               borderTop: `3px solid #666`,
               marginTop: 10,
-              boxShadow: "0 3px 15px #DDD",
+              boxShadow: "0 3px 5px #EEE",
               borderRadius: 3,
               paddingBottom: 5,
               zIndex: 10,

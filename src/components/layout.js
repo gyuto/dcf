@@ -11,8 +11,10 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
-import "./layout.css"
 import menuContent from "./menu/content"
+import Footer from "./footer"
+import "../styles/layout.css"
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -25,7 +27,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Menu content={menuContent} />
         <div
@@ -41,25 +43,9 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer
-            style={{
-              marginTop: 30,
-              textAlign: "center",
-              fontSize: 14,
-            }}
-          >
-            © {new Date().getFullYear()},{` `}
-            <a
-              href="/"
-              style={{
-                color: "#666",
-              }}
-            >
-              Delek Children's Foundation
-            </a>
-          </footer>
+          <Footer />
         </div>
-      </>
+      </div>
     )}
   />
 )

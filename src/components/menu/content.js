@@ -6,6 +6,10 @@ export default [
   {
     text: "About us",
     link: "/mission-statement",
+    children: [
+      { text: "Mission statement", link: "/mission-statement" },
+      { text: "About founder", link: "/about-founder" },
+    ],
   },
   {
     text: "Programs",
