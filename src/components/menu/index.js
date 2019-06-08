@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./button"
 
+// todo - get current location. disable menu
 const Menu = ({ content }) => {
   return (
     <div
