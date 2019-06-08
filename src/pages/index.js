@@ -9,6 +9,7 @@ import getImage from "../images/get-image"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
 import contentMissionStatement from "../content/articles/mission-statement.json"
 import contentSponsorUnderprivilegedChildren from "../content/articles/sponsor-underprivileged-children.json"
+import contentVocationalPrograms from "../content/articles/vocational-programs.json"
 
 const format = content => ({
   ...content,
@@ -32,8 +33,9 @@ const IndexPage = () => (
     <Preview
       content={[
         format(contentCharityTour),
-        format(contentMissionStatement),
+        // format(contentMissionStatement),
         format(contentSponsorUnderprivilegedChildren),
+        format(contentVocationalPrograms),
       ]}
       defaultPreviewPic={getImage("cover2")}
     />
