@@ -7,18 +7,35 @@ const Button = ({ content }) => {
 
   return (
     <>
-      <a
-        key={content.text}
-        href={content.link}
-        onMouseEnter={() => {
-          toggleRootButtonState(true)
-        }}
-        onMouseLeave={() => {
-          toggleRootButtonState(false)
-        }}
-      >
-        {content.text}
-      </a>
+      {content.link ? (
+        <a
+          key={content.text}
+          href={content.link}
+          onMouseEnter={() => {
+            toggleRootButtonState(true)
+          }}
+          onMouseLeave={() => {
+            toggleRootButtonState(false)
+          }}
+        >
+          {content.text}
+        </a>
+      ) : (
+        <div
+          style={{
+            color: colors.brandSecondary,
+          }}
+          key={content.text}
+          onMouseEnter={() => {
+            toggleRootButtonState(true)
+          }}
+          onMouseLeave={() => {
+            toggleRootButtonState(false)
+          }}
+        >
+          {content.text}
+        </div>
+      )}
 
       {(mouseOverRootButton || mouseOverDropdown) && content.children && (
         <div

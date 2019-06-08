@@ -25,7 +25,16 @@ export default [
   },
   {
     text: "Gallery",
-    link:
-      "https://www.facebook.com/pg/Delek-Childrens-Foundation-413781628796613/photos/?ref=page_internal",
+    children: [
+      {
+        text: "Photos",
+        link:
+          "https://www.facebook.com/pg/Delek-Childrens-Foundation-413781628796613/photos/?ref=page_internal",
+      },
+      {
+        text: "Videos",
+        link: "https://www.youtube.com/channel/UC7K3C7iSY1JO0HAy4P-Jn5w/videos",
+      },
+    ],
   },
 ]
