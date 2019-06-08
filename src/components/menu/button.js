@@ -41,6 +41,7 @@ const Button = ({ content }) => {
               marginTop: 10,
               boxShadow: "0 3px 15px #DDD",
               borderRadius: 3,
+              paddingBottom: 5,
             }}
           >
             {content.children.map(c => {
@@ -49,7 +50,7 @@ const Button = ({ content }) => {
                   style={{
                     width: 220,
                     overflow: "visible",
-                    margin: "10px 0",
+                    margin: "20px 0",
                     paddingLeft: 20,
                     fontSize: 15,
                   }}
