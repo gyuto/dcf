@@ -8,6 +8,8 @@ function Preview({ content, defaultPreviewPic }) {
         margin: "auto",
         maxWidth: 1200,
         display: "flex",
+        flexWrap: "wrap",
+        width: "100%",
         justifyContent: "space-around",
       }}
     >

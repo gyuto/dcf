@@ -5,7 +5,7 @@ export default [
   },
   {
     text: "About us",
-    link: "/mission-statement",
+    // link: "/mission-statement",
     children: [
       { text: "Mission statement", link: "/mission-statement" },
       { text: "About founder", link: "/about-founder" },
@@ -17,7 +17,7 @@ export default [
       { text: "Vocational programs", link: "/vocational-programs" },
       { text: "Scholarships", link: "/scholarships" },
     ],
-    link: "/vocational-programs",
+    // link: "/vocational-programs",
   },
   {
     text: "Support us",

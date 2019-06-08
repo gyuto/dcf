@@ -73,6 +73,7 @@ const Button = ({ content }) => {
                     paddingLeft: 20,
                     fontSize: 15,
                   }}
+                  key={c.text}
                 >
                   <a href={c.link} key={c.text}>
                     {c.text}

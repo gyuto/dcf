@@ -7,6 +7,8 @@ const Menu = ({ content }) => {
       style={{
         display: "flex",
         justifyContent: "center",
+        flexWrap: "wrap",
+        width: "100%",
       }}
     >
       {content.map(m => {
@@ -18,9 +20,12 @@ const Menu = ({ content }) => {
             }}
           >
             {m.link || m.children ? (
-              <Button content={m} key={m.text} />
+              <div key={m.text}>
+                <Button content={m} />
+              </div>
             ) : (
               <div
+                key={m.text}
                 style={{
                   color: "#BBB",
                 }}

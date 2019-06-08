@@ -11,6 +11,8 @@ const Block = ({ content, defaultPreviewPic }) => {
         overflow: "hidden",
         textDecoration: "none",
         color: "#555",
+        minWidth: 350,
+        marginBottom: 20,
       }}
       href={content.link}
     >
