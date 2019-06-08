@@ -4,7 +4,7 @@ import React from "react"
 import * as colors from "../styles/colors"
 import getImage from "../images/get-image"
 
-const Article = ({ children, content }) => {
+const Article = ({ children, content = {} }) => {
   return (
     <div
       style={{
@@ -28,7 +28,7 @@ const Article = ({ children, content }) => {
           maxWidth: 960,
         }}
       >
-        <h1>{content.title}</h1>
+        {content.title && <h1>{content.title}</h1>}
         {R.path(["pic", "title"], content) && (
           <div
             style={{
@@ -43,7 +43,8 @@ const Article = ({ children, content }) => {
             }}
           />
         )}
-        <p>{content.main}</p>
+        {content.main && <p>{content.main}</p>}
+        {children}
         <a
           href="/"
           style={{

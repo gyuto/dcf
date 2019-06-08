@@ -16,6 +16,7 @@ const menu = [
   },
   {
     text: "Support us",
+    link: "/support-us",
   },
   {
     text: "Gallery",
