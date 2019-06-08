@@ -20,6 +20,8 @@ const menu = [
   },
   {
     text: "Gallery",
+    link:
+      "https://www.facebook.com/pg/Delek-Childrens-Foundation-413781628796613/photos/?ref=page_internal",
   },
 ]
 
