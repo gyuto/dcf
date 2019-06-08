@@ -42,6 +42,7 @@ const Button = ({ content }) => {
               boxShadow: "0 3px 15px #DDD",
               borderRadius: 3,
               paddingBottom: 5,
+              zIndex: 10,
             }}
           >
             {content.children.map(c => {
