@@ -20,6 +20,7 @@ const Page = () => {
             style={{
               float: "left",
               marginRight: 30,
+              marginBottom: 20,
               transform: "translateY(5px)",
             }}
             src={Img}
