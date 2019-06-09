@@ -4,26 +4,10 @@ import "./styles.scss"
 
 export default () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        marginBottom: 50,
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="student-profile-container">
       {content.map(student => {
         return (
-          <div
-            key={student.name}
-            className="student-profile-pic"
-            style={{
-              borderRadius: "50%",
-              width: 150,
-              height: 150,
-              overflow: "hidden",
-              marginRight: 30,
-            }}
-          >
+          <div key={student.name} className="student-profile-pic">
             <img
               src={student.pic}
               style={{

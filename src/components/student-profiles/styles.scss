@@ -1,9 +1,35 @@
+$break-samall: 600px;
+
+.student-profile-container {
+  display: flex;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  @media screen and (max-width: $break-samall) {
+    justify-content: center;
+  }
+}
+
 .student-profile-pic {
-  filter: grayscale(50%);
+  filter: grayscale(100%);
+  border-radius: 50%;
+  overflow: hidden;
   opacity: 0.7;
+  border: 2px solid #ccc;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
   &:hover {
     filter: none;
     opacity: 1;
     cursor: pointer;
+    border: 2px solid palevioletred;
+  }
+
+  @media screen and (max-width: $break-samall) {
+    width: 120px;
+    height: 120px;
   }
 }
