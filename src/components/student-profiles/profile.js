@@ -3,27 +3,9 @@ import * as colors from "../../styles/colors"
 
 export default ({ profile }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
-      <div
-        style={{
-          width: 250,
-          marginRight: 50,
-        }}
-      >
-        <div
-          style={{
-            width: 150,
-            height: 150,
-            overflow: "hidden",
-            borderRadius: "50%",
-            marginLeft: 100,
-            border: `2px solid #eee`,
-          }}
-        >
+    <div className="student-profile-modal-main">
+      <div className="student-profile-modal-left">
+        <div className="student-profile-modal-pic-container">
           <img
             style={{
               width: "100%",
@@ -33,26 +15,11 @@ export default ({ profile }) => {
           />
         </div>
         {profile.notes && (
-          <div
-            style={{
-              textAlign: "right",
-              marginTop: 40,
-              width: 240,
-              marginLeft: 10,
-              color: colors.brandSecondary,
-            }}
-          >
-            {profile.notes[0]}
-          </div>
+          <div className="student-profile-notes">{profile.notes[0]}</div>
         )}
       </div>
 
-      <div
-        style={{
-          width: 400,
-          marginTop: 50,
-        }}
-      >
+      <div className="student-profile-modal-right">
         <h2
           style={{
             color: colors.brandSecondary,
@@ -73,6 +40,10 @@ export default ({ profile }) => {
           )
         })}
       </div>
+
+      {profile.notes && (
+        <div className="student-profile-notes-footer">{profile.notes[0]}</div>
+      )}
     </div>
   )
 }
