@@ -77,7 +77,8 @@ export default [
     name: "Lobsang Wangmo",
     pic: lobsangW,
     info: [
-      ["Born", "Dharamsala"][("DOB", 1994)],
+      ["Born", "Dharamsala"],
+      ["DOB", "1994"],
       ["School/College", `Bangalore St. Marth's Nursing College`],
       ["Class", "3 yaer program in college"],
       ["Gyuto scholarship since", "December 2012"],
