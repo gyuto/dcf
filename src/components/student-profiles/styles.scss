@@ -1,0 +1,9 @@
+.student-profile-pic {
+  filter: grayscale(50%);
+  opacity: 0.7;
+  &:hover {
+    filter: none;
+    opacity: 1;
+    cursor: pointer;
+  }
+}

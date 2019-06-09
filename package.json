@@ -14,9 +14,11 @@
     "gatsby-plugin-offline": "^2.1.0",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.36",
     "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-sharp": "^2.1.19",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
@@ -25,6 +27,7 @@
     "react-helmet": "^5.2.1",
     "react-lines-ellipsis": "^0.14.1",
     "react-responsive-carousel": "^3.1.49",
+    "sass": "^1.21.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
