@@ -1,0 +1,8 @@
+@import "../../styles/main.scss";
+
+.address-block {
+  padding: 50px 0;
+  @media screen and (max-width: $break-samall) {
+    padding: 50px 30px;
+  }
+}

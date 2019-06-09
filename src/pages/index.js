@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import Preview from "../components/article-preview"
 import getImage from "../images/get-image"
 import Connect from "../components/connect"
+import AddressEtc from "../components/address-etc"
+import Spacer from "../components/spacer"
 
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
@@ -44,6 +46,8 @@ const IndexPage = () => (
 
     {/* <Link to="/mission-statement/">Go to page 2</Link> */}
     {/* <Newsletter /> */}
+    <Spacer height={50} />
+    <AddressEtc />
     <Connect content={connectContent} />
   </Layout>
 )

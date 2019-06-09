@@ -11,7 +11,7 @@ const Block = ({ content, defaultPreviewPic }) => {
         overflow: "hidden",
         textDecoration: "none",
         color: "#555",
-        minWidth: 350,
+        minWidth: 390,
         marginBottom: 20,
       }}
       href={content.link}
@@ -46,7 +46,7 @@ const Block = ({ content, defaultPreviewPic }) => {
       >
         <LinesEllipsis
           text={content.main}
-          maxLine={5}
+          maxLine={7}
           ellipsis="..."
           trimRight
           basedOn="letters"
