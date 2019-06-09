@@ -4,12 +4,34 @@
   background-color: white;
   padding: 40px 100px;
   border-radius: 3px;
+  animation: fade-in;
+  animation-duration: 0.3s;
   @media screen and (max-width: $break-samall) {
     padding: 30px;
     width: 100%;
     bottom: 0;
     transform: translateY(5px);
     max-height: calc(100%-20px);
+    animation: slide-in;
+    animation-duration: 0.3s;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(5px);
   }
 }
 
