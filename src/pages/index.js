@@ -8,12 +8,15 @@ import getImage from "../images/get-image"
 import Connect from "../components/connect"
 import AddressEtc from "../components/address-etc"
 import Spacer from "../components/spacer"
+import StudentPropfiles from "../components/student-profiles"
 
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
 import contentMissionStatement from "../content/articles/mission-statement.json"
 import contentSponsorUnderprivilegedChildren from "../content/articles/sponsor-underprivileged-children.json"
 import contentVocationalPrograms from "../content/articles/vocational-programs.json"
+
+import * as colors from "../styles/colors"
 
 const format = content => ({
   ...content,
@@ -47,6 +50,25 @@ const IndexPage = () => (
     {/* <Link to="/mission-statement/">Go to page 2</Link> */}
     {/* <Newsletter /> */}
     <Spacer height={50} />
+
+    <div
+      style={{
+        borderTop: `1px solid ${colors.brandSecondary}`,
+        borderBottom: `1px solid ${colors.brandSecondary}`,
+        paddingTop: 40,
+      }}
+    >
+      <h2
+        style={{
+          textAlign: "center",
+          color: colors.brandSecondary,
+        }}
+      >
+        Sponsored students
+      </h2>
+      <StudentPropfiles count={6} />
+    </div>
+    <Spacer height={70} />
     <AddressEtc />
     <Connect content={connectContent} />
   </Layout>

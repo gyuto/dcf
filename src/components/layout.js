@@ -13,6 +13,7 @@ import Header from "./header"
 import Menu from "./menu"
 import menuContent from "./menu/content"
 import Footer from "./footer"
+import Spacer from "./spacer"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => (
@@ -43,6 +44,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <Footer />
+          <Spacer height={30} />
         </div>
       </div>
     )}
