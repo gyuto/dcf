@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => {
-  if (!window) {
+  if (typeof window == "undefined") {
     return null
   }
   const clientWidth = window.document.body.clientWidth
