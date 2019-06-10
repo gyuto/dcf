@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => {
-  const clientWidth = document.body.clientWidth
+  const clientWidth = window.document.body.clientWidth
   const width = clientWidth >= 1200 ? 1200 : "100%"
   const height = width === 1200 ? 600 : (clientWidth / 16) * 9
 
