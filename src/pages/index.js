@@ -9,6 +9,7 @@ import Connect from "../components/connect"
 import AddressEtc from "../components/address-etc"
 import Spacer from "../components/spacer"
 import StudentPropfiles from "../components/student-profiles"
+import Youtube from "../components/home-page-sections/youtube"
 
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
@@ -69,6 +70,10 @@ const IndexPage = () => (
       <StudentPropfiles count={6} />
     </div>
     <Spacer height={70} />
+
+    <Youtube />
+    <Spacer height={70} />
+
     <AddressEtc />
     <Connect content={connectContent} />
   </Layout>
