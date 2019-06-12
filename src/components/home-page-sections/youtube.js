@@ -30,12 +30,11 @@ export default () => {
       >
         <div
           style={{
-            border: "5px solid red",
+            // border: "5px solid red",
             width: width,
             height: height,
             position: "relative",
-            border: "1px solid red",
-            padding: 10,
+            // padding: 10,
           }}
         >
           <iframe
