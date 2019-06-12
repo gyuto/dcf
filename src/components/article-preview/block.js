@@ -1,17 +1,18 @@
 import React from "react"
 import LinesEllipsis from "react-lines-ellipsis"
+import "./article-preview.scss"
 
 const Block = ({ content, defaultPreviewPic }) => {
   return (
     <a
+      className="article-preview-block"
       style={{
-        width: "30%",
-        boxShadow: "0 3px 15px #DDD",
+        boxShadow: "0 0 2px 3px #eee",
         borderRadius: "5px",
+        borderBottom: "1px solid #ddd",
         overflow: "hidden",
         textDecoration: "none",
         color: "#555",
-        minWidth: 350,
         marginBottom: 20,
       }}
       href={content.link}
@@ -46,7 +47,7 @@ const Block = ({ content, defaultPreviewPic }) => {
       >
         <LinesEllipsis
           text={content.main}
-          maxLine={5}
+          maxLine={6}
           ellipsis="..."
           trimRight
           basedOn="letters"

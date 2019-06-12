@@ -24,6 +24,7 @@ const Button = ({ content }) => {
         <div
           style={{
             color: colors.brandSecondary,
+            cursor: "default",
           }}
           key={content.text}
           onMouseEnter={() => {

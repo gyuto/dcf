@@ -2,3 +2,14 @@ $break-samall: 600px;
 $brand: #000000;
 $white: white;
 $brandSecondary: palevioletred;
+
+.responsive-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  @media screen and (max-width: $break-samall) {
+    justify-content: center;
+    flex-direction: column;
+  }
+}

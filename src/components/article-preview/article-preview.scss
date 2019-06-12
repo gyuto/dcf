@@ -1,0 +1,8 @@
+@import "../../styles/main.scss";
+
+.article-preview-block {
+  width: 30%;
+  @media screen and (max-width: $break-samall) {
+    width: 100%;
+  }
+}

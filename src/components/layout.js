@@ -13,6 +13,7 @@ import Header from "./header"
 import Menu from "./menu"
 import menuContent from "./menu/content"
 import Footer from "./footer"
+import Spacer from "./spacer"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => (
@@ -38,12 +39,12 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: `0 auto`,
-            padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
           }}
         >
           <main>{children}</main>
           <Footer />
+          <Spacer height={30} />
         </div>
       </div>
     )}

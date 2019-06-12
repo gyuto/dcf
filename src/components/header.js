@@ -6,8 +6,9 @@ import * as colors from "../styles/colors"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: colors.brand,
+      background: colors.white, //colors.brand,
       marginBottom: `1.45rem`,
+      boxShadow: "0 3px 5px #DDD",
     }}
   >
     <nav class="social">
@@ -22,7 +23,6 @@ const Header = ({ siteTitle }) => (
       style={{
         textAlign: "center",
         margin: `0 auto`,
-        // maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: colors.white,
+            color: colors.brand,
             textDecoration: `none`,
           }}
         >

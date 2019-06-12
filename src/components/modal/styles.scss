@@ -8,12 +8,14 @@
   animation-duration: 0.3s;
   @media screen and (max-width: $break-samall) {
     padding: 30px;
+    padding-bottom: 80px;
     width: 100%;
     bottom: 0;
     transform: translateY(5px);
-    max-height: calc(100%-20px);
     animation: slide-in;
     animation-duration: 0.3s;
+    overflow: scroll;
+    max-height: 70%;
   }
 }
 
