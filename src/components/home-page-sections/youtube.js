@@ -20,12 +20,16 @@ export default () => {
     >
       <div
         style={{
+          border: "5px solid red",
           width: width,
           height: height,
+          position: "relative",
+          border: "1px solid red",
+          padding: 10,
         }}
       >
         <iframe
-          width={width}
+          width="100%"
           height={height}
           aligh="middle"
           src="https://www.youtube.com/embed/VcFZmdjaAJ8"
