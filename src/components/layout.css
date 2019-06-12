@@ -611,3 +611,67 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* styles for the header social navigation bar, which closes when .close is clicked */
+
+nav.social {
+  align-items: center;
+  background: black;
+  color: white;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  height: 5em;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  transition: height .28s ease;
+  width: 100vw;
+}
+nav.social .close {
+  position: absolute;
+  right: .75em;
+}
+nav.social div {
+  font-size: 1.2em;
+  padding: .5em 1.5em .3em .5em;
+  white-space: nowrap;
+}
+nav.social a {
+  color: white;
+  font-size: 1.5em;
+  padding: .25em .5em;
+}
+nav.social a:nth-last-child(2){
+  margin-right: 3em;
+}
+@media all and (max-width: 700px){
+  nav.social {
+    height: 4em;
+  }
+  nav.social div {
+    margin-left: 1em;
+  }
+  nav.social div::after {
+    content: " DCF";
+  }
+  nav.social span {
+    display: none;
+  }
+  nav.social .close {
+    right: .5em;
+  }
+}
+@media all and (max-width: 450px){
+  nav.social {
+    height: 3em;
+  }
+  nav.social div {
+    display: none;
+  }
+  nav.social :nth-child(2) {
+    margin-left: 1.25em;
+  }
+  nav.social .close {
+    right: 0;
+  }
+}
