@@ -18,20 +18,7 @@ export default () => {
           // textAlign: "center",
           // paddingLeft: (clientWidth - width) / 2,
         }}
-      >
-        <div
-          style={{
-            border: "5px solid red",
-            width: width,
-            height: height,
-            position: "relative",
-            border: "1px solid red",
-            padding: 10,
-          }}
-        >
-          yo
-        </div>
-      </div>
+      />
       <div
         style={{
           width: "100%",
