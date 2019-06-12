@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           width: "100%",
           display: "flex",
@@ -18,7 +18,7 @@ export default () => {
           // textAlign: "center",
           // paddingLeft: (clientWidth - width) / 2,
         }}
-      />
+      /> */}
       <div
         style={{
           width: "100%",
