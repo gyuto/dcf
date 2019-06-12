@@ -22,7 +22,8 @@ export default () => {
       <div
         style={{
           width: "100%",
-          height={(clientWidth / 16) * 9},
+          height: (clientWidth / 16) * 9,
+
           display: "flex",
           justifyContent: "center",
           // textAlign: "center",
