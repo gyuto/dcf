@@ -13,19 +13,26 @@ export default () => {
       style={{
         width: "100%",
         display: "flex",
-        // justifyContent: "center",
+        justifyContent: "center",
         // textAlign: "center",
-        paddingLeft: (clientWidth - width) / 2,
+        // paddingLeft: (clientWidth - width) / 2,
       }}
     >
-      <iframe
-        width={width}
-        height={height}
-        src="https://www.youtube.com/embed/VcFZmdjaAJ8"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
+      <div
+        style={{
+          width: width,
+          height: height,
+        }}
+      >
+        <iframe
+          width={width}
+          height={height}
+          src="https://www.youtube.com/embed/VcFZmdjaAJ8"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
     </div>
   )
 }
