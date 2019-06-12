@@ -625,7 +625,7 @@ nav.social {
   overflow: hidden;
   position: fixed;
   transition: height .28s ease;
-  width: 100vw;
+  width: 100%;
 }
 nav.social .close {
   position: absolute;
