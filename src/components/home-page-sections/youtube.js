@@ -13,8 +13,9 @@ export default () => {
       style={{
         width: "100%",
         display: "flex",
-        justifyContent: "center",
-        textAlign: "center",
+        // justifyContent: "center",
+        // textAlign: "center",
+        paddingLeft: (clientWidth - width) / 2,
       }}
     >
       <iframe
