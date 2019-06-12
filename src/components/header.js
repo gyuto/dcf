@@ -6,8 +6,9 @@ import * as colors from "../styles/colors"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: colors.brand,
+      background: colors.white, //colors.brand,
       marginBottom: `1.45rem`,
+      boxShadow: "0 3px 5px #DDD",
     }}
   >
     <div
@@ -21,7 +22,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: colors.white,
+            color: colors.brand,
             textDecoration: `none`,
           }}
         >
