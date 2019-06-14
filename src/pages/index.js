@@ -10,6 +10,7 @@ import AddressEtc from "../components/address-etc"
 import Spacer from "../components/spacer"
 import StudentPropfiles from "../components/student-profiles"
 import Youtube from "../components/home-page-sections/youtube"
+import CenteredBlock from "../components/centered-block"
 
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
