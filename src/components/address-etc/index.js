@@ -12,7 +12,7 @@ export default () => {
       }}
     >
       <CenteredBlock>
-        <div className="responsive-flex address-block">
+        <div className="address-block">
           <p>
             5600 Sutter Avenue
             <br />
