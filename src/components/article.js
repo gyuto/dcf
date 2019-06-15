@@ -9,6 +9,8 @@ const Article = ({ children, content = {} }) => {
     <div
       style={{
         marginTop: 30,
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       {R.path(["pic", "banner"], content) && (
@@ -24,7 +26,7 @@ const Article = ({ children, content = {} }) => {
       )}
       <div
         style={{
-          margin: `0 auto`,
+          margin: `0 20px`,
           maxWidth: 960,
         }}
       >
