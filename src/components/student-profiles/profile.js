@@ -1,6 +1,8 @@
 import React from "react"
 import * as colors from "../../styles/colors"
 
+// TODO-DI this is a perfect place to try out css grid
+
 export default ({ profile }) => {
   return (
     <div className="student-profile-modal-main">
@@ -14,7 +16,7 @@ export default ({ profile }) => {
             alt={profile.name}
           />
         </div>
-        {profile.notes && (
+        {profile.notes && profile.notes[0] && (
           <div className="student-profile-notes">{profile.notes[0]}</div>
         )}
       </div>
@@ -41,7 +43,7 @@ export default ({ profile }) => {
         })}
       </div>
 
-      {profile.notes && (
+      {profile.notes && profile.notes[0] && (
         <div className="student-profile-notes-footer">{profile.notes[0]}</div>
       )}
     </div>

@@ -11,12 +11,7 @@ export default ({ count = 0 }) => {
   })
 
   return (
-    <div
-      className="student-profile-container"
-      style={{
-        justifyContent: count ? "center" : null,
-      }}
-    >
+    <>
       {modal.on && (
         <Modal
           dismissModal={() => {
@@ -28,28 +23,35 @@ export default ({ count = 0 }) => {
           <Profile profile={content[modal.studentIndex]} />
         </Modal>
       )}
-      {/* Only render the first ${count} student profiles */}
-      {(count ? content.slice(0, count) : content).map((student, index) => {
-        return (
-          <div
-            onClick={() => {
-              updateModalState({
-                on: true,
-                studentIndex: index,
-              })
-            }}
-            key={student.name + index}
-            className="student-profile-pic"
-          >
-            <img
-              src={student.pic}
-              style={{
-                width: "100%",
+      <div
+        className="student-profile-container"
+        style={{
+          justifyContent: count ? "center" : null,
+        }}
+      >
+        {/* Only render the first ${count} student profiles */}
+        {(count ? content.slice(0, count) : content).map((student, index) => {
+          return (
+            <div
+              onClick={() => {
+                updateModalState({
+                  on: true,
+                  studentIndex: index,
+                })
               }}
-            />
-          </div>
-        )
-      })}
-    </div>
+              key={student.name + index}
+              className="student-profile-pic"
+            >
+              <img
+                src={student.pic}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </div>
+          )
+        })}
+      </div>
+    </>
   )
 }

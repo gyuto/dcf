@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Menu content={menuContent} />
         <div
@@ -36,17 +36,10 @@ const Layout = ({ children }) => (
             height: 30,
           }}
         />
-        <div
-          style={{
-            margin: `0 auto`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <Footer />
-          <Spacer height={30} />
-        </div>
-      </div>
+        {children}
+        <Footer />
+        <Spacer height={30} />
+      </>
     )}
   />
 )
