@@ -3,6 +3,7 @@
 .article-preview-block {
   width: 30%;
   @media screen and (max-width: $break-samall) {
-    width: 100%;
+    width: 95%;
+    margin: auto;
   }
 }
