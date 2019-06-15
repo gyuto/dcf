@@ -8,14 +8,36 @@
   animation-duration: 0.3s;
   @media screen and (max-width: $break-samall) {
     padding: 30px;
-    padding-bottom: 80px;
-    width: 100%;
-    bottom: 0;
-    transform: translateY(5px);
-    animation: slide-in;
-    animation-duration: 0.3s;
+    padding-bottom: 100px;
     overflow: scroll;
-    max-height: 70%;
+    border-radius: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+}
+
+.modal-dismiss-button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  z-index: 21;
+  display: none;
+  @media screen and (max-width: $break-samall) {
+    display: flex;
   }
 }
 
@@ -25,15 +47,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateY(500px);
-  }
-  to {
-    transform: translateY(5px);
   }
 }
 
@@ -49,6 +62,6 @@
   justify-content: center;
   align-items: center;
   @media screen and (max-width: $break-samall) {
-    align-items: flex-end;
+    padding: 0;
   }
 }

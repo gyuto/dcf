@@ -28,7 +28,10 @@ const format = content => ({
 })
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`gyuto`, `delek`, `children's`, `foundation`, `react`]}
+    />
     <div
       style={{
         maxHeight: 520,
@@ -52,7 +55,6 @@ const IndexPage = () => (
     {/* <Link to="/mission-statement/">Go to page 2</Link> */}
     {/* <Newsletter /> */}
     <Spacer height={50} />
-
     <div
       style={{
         borderTop: `1px solid ${colors.brandSecondary}`,
@@ -71,10 +73,8 @@ const IndexPage = () => (
       <StudentPropfiles count={6} />
     </div>
     <Spacer height={70} />
-
     <Youtube />
     <Spacer height={70} />
-
     <AddressEtc />
     <Connect content={connectContent} />
   </Layout>
