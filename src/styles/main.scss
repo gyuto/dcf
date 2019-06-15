@@ -13,3 +13,11 @@ $brandSecondary: palevioletred;
     flex-direction: column;
   }
 }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  @media screen and (max-width: $break-samall) {
+    font-size: 6vw;
+  }
+}
