@@ -84,7 +84,7 @@ const IndexPage = () => (
           }}
           href="/student-profiles"
         >
-          View more
+          More student profiles
         </a>
       </div>
     </div>
