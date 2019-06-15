@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const Page = () => {
   return (
     <Layout>
-      <SEO title="Mission statement" />
+      <SEO title="Support us" />
       <Article content={{ title: "SUPPORT US" }}>
         <p>
           Your contribution will change the lives of many children who have very
