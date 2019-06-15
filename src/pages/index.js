@@ -55,11 +55,12 @@ const IndexPage = () => (
     {/* <Link to="/mission-statement/">Go to page 2</Link> */}
     {/* <Newsletter /> */}
     <Spacer height={50} />
+
     <div
       style={{
         borderTop: `1px solid ${colors.brandSecondary}`,
         borderBottom: `1px solid ${colors.brandSecondary}`,
-        paddingTop: 40,
+        padding: "40px 0",
       }}
     >
       <h2
@@ -70,7 +71,22 @@ const IndexPage = () => (
       >
         Sponsored students
       </h2>
+      <Spacer height={20} />
       <StudentPropfiles count={6} />
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <a
+          style={{
+            color: "#aaa",
+          }}
+          href="/student-profiles"
+        >
+          More student profiles
+        </a>
+      </div>
     </div>
     <Spacer height={70} />
     <Youtube />
