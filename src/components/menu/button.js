@@ -58,7 +58,7 @@ const Button = ({ content }) => {
               width: 220,
               borderTop: `3px solid #666`,
               marginTop: 10,
-              boxShadow: "0 3px 5px #EEE",
+              boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
               borderRadius: 3,
               paddingBottom: 5,
               zIndex: 10,
