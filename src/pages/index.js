@@ -30,17 +30,19 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title="Home"
-      keywords={[`gyuto`, `delek`, `children's`, `foundation`, `react`]}
+      keywords={[
+        `gyuto`,
+        `delek`,
+        `children's`,
+        `foundation`,
+        `tibetan`,
+        `tebet`,
+        `nepal`,
+        `Delek Children's Foundation`,
+      ]}
     />
-    <div
-      style={{
-        maxHeight: 520,
-        overflow: "hidden",
-        marginBottom: 70,
-      }}
-    >
-      <Carousel />
-    </div>
+
+    <Carousel />
 
     <Preview
       content={[
