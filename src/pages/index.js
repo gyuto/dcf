@@ -11,6 +11,7 @@ import Spacer from "../components/spacer"
 import StudentPropfiles from "../components/student-profiles"
 import Youtube from "../components/home-page-sections/youtube"
 import CenteredBlock from "../components/centered-block"
+import SupportUs from "../components/support-us"
 
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
@@ -91,7 +92,11 @@ const IndexPage = () => (
       </div>
     </div>
     <Spacer height={70} />
+
     <Youtube />
+    <Spacer height={70} />
+
+    <SupportUs />
     <Spacer height={70} />
     <AddressEtc />
     <Connect content={connectContent} />
