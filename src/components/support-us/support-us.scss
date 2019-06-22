@@ -1,0 +1,24 @@
+@import "../../styles/main.scss";
+
+.support-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (max-width: $break-samall) {
+    flex-direction: column;
+  }
+}
+
+.donation-card {
+  width: 48%;
+  color: #666666;
+  border-top: 3px solid $brandSecondary;
+  @media screen and (max-width: $break-samall) {
+    border-top: none;
+    border-left: 3px solid $brandSecondary;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 25px);
+  }
+}

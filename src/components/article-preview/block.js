@@ -7,7 +7,7 @@ const Block = ({ content, defaultPreviewPic }) => {
     <a
       className="article-preview-block"
       style={{
-        boxShadow: "0 0 2px 3px #eee",
+        boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
         borderRadius: "5px",
         borderBottom: "1px solid #ddd",
         overflow: "hidden",
