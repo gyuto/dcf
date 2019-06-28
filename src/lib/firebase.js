@@ -13,15 +13,15 @@ const config = {
 const init = async () => {
   firebase.initializeApp(config)
 
-  var db = firebase.firestore()
+  const db = firebase.firestore()
 
   db.collection("students")
     .get()
-    .then(querySnapshot => {
-      querySnapshot.forEach(doc => {
-        const uuu = doc.data()
+    .then(students => {
+      students.forEach(student => {
+        const studentProfile = student.data()
 
-        console.log(3030, uuu)
+        console.log(3030, studentProfile)
       })
     })
 }
