@@ -28,10 +28,6 @@ const format = content => ({
   },
 })
 const IndexPage = () => {
-  console.log(1010, process.env)
-  console.log(2020, process.env.MY_OTHER_VAR)
-  console.log(3030, process.env.BERNIE)
-
   return (
     <Layout>
       <SEO

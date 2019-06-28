@@ -12,18 +12,6 @@ const config = {
 
 const init = async () => {
   firebase.initializeApp(config)
-
-  const db = firebase.firestore()
-
-  db.collection("students")
-    .get()
-    .then(students => {
-      students.forEach(student => {
-        const studentProfile = student.data()
-
-        console.log(3030, studentProfile)
-      })
-    })
 }
 
 export default init

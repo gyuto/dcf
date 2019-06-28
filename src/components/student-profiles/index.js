@@ -1,14 +1,10 @@
 import React from "react"
+import firebase from "firebase"
 import content from "./content"
 import Modal from "../modal"
 import Profile from "./profile"
 import "./styles.scss"
-import initFirestore from "../../lib/firebase"
 
-const bs = async () => {
-  // if not init yet. init it.
-  await initFirestore()
-}
 class StudentProfiles extends React.Component {
   state = {
     modalOn: false,
@@ -66,9 +62,32 @@ class StudentProfiles extends React.Component {
   }
 
   componentDidMount() {
-    bs()
+    const maybeTryAndPullData = () => {
+      const isFirebaseInitialized = !!firebase.apps[0]
+      if (isFirebaseInitialized) {
+        this.tryAndPullStudentData()
+      } else {
+        setTimeout(() => {
+          maybeTryAndPullData()
+        }, 100)
+      }
+    }
+    maybeTryAndPullData()
   }
 
+  tryAndPullStudentData() {
+    const db = firebase.firestore()
+
+    db.collection("students")
+      .get()
+      .then(students => {
+        students.forEach(student => {
+          const studentProfile = student.data()
+
+          console.log(3030, studentProfile)
+        })
+      })
+  }
   updateModalState = state => {
     this.setState(state)
   }
