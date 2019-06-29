@@ -11,7 +11,6 @@ const config = {
 }
 
 const init = () => {
-  console.log(1010, process.env.FIREBASE_PROJECT_ID)
   firebase.initializeApp(config)
 }
 
