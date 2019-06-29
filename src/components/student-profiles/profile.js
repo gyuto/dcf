@@ -4,6 +4,10 @@ import * as colors from "../../styles/colors"
 // TODO-DI this is a perfect place to try out css grid
 
 export default ({ profile }) => {
+  const info = profile.info
+  const infoKeys = info.filter((i, index) => !(Number(index) % 2))
+  const infoValues = info.filter((i, index) => !!(Number(index) % 2))
+
   return (
     <div className="student-profile-modal-main">
       <div className="student-profile-modal-left">
@@ -29,15 +33,15 @@ export default ({ profile }) => {
         >
           {profile.name}
         </h2>
-        {profile.info.map((line, index) => {
+        {infoKeys.map((infoKey, index) => {
           return (
             <div
-              key={line[0] + index}
+              key={infoKey + index}
               style={{
                 color: "#666",
               }}
             >
-              <b>{line[0]}</b>: {line[1]}
+              <b>{infoKey}</b>: {infoValues[index]}
             </div>
           )
         })}

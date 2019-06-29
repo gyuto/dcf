@@ -1,6 +1,5 @@
 import React from "react"
 import firebase from "firebase"
-import content from "./content"
 import Modal from "../modal"
 import Profile from "./profile"
 import "./styles.scss"
@@ -9,10 +8,11 @@ class StudentProfiles extends React.Component {
   state = {
     modalOn: false,
     studentIndex: 0,
+    students: [],
   }
 
   render() {
-    const { modalOn, studentIndex } = this.state
+    const { modalOn, studentIndex, students } = this.state
     const { count = 0 } = this.props
 
     return (
@@ -25,7 +25,7 @@ class StudentProfiles extends React.Component {
               })
             }}
           >
-            <Profile profile={content[studentIndex]} />
+            <Profile profile={students[studentIndex]} />
           </Modal>
         )}
         <div
@@ -35,27 +35,29 @@ class StudentProfiles extends React.Component {
           }}
         >
           {/* Only render the first ${count} student profiles */}
-          {(count ? content.slice(0, count) : content).map((student, index) => {
-            return (
-              <div
-                onClick={() => {
-                  this.updateModalState({
-                    modalOn: true,
-                    studentIndex: index,
-                  })
-                }}
-                key={student.name + index}
-                className="student-profile-pic"
-              >
-                <img
-                  src={student.pic}
-                  style={{
-                    width: "100%",
+          {(count ? students.slice(0, count) : students).map(
+            (student, index) => {
+              return (
+                <div
+                  onClick={() => {
+                    this.updateModalState({
+                      modalOn: true,
+                      studentIndex: index,
+                    })
                   }}
-                />
-              </div>
-            )
-          })}
+                  key={student.name + index}
+                  className="student-profile-pic"
+                >
+                  <img
+                    src={student.pic}
+                    style={{
+                      width: "100%",
+                    }}
+                  />
+                </div>
+              )
+            }
+          )}
         </div>
       </div>
     )
@@ -83,8 +85,11 @@ class StudentProfiles extends React.Component {
       .then(students => {
         students.forEach(student => {
           const studentProfile = student.data()
-
-          console.log(3030, studentProfile)
+          const students = this.state.students
+          students.push(studentProfile)
+          this.setState({
+            students,
+          })
         })
       })
   }
