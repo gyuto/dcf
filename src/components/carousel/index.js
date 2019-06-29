@@ -62,6 +62,7 @@ const Carousel = () => (
       autoPlay
       swipeable
       showThumbs={false}
+      stopOnHover={false}
     >
       {imageList.map((image, index) => (
         <SingleImage
