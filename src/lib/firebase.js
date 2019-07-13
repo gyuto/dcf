@@ -10,7 +10,7 @@ const config = {
   appId: process.env.FIREBASE_APP_ID,
 }
 
-const init = async () => {
+const init = () => {
   firebase.initializeApp(config)
 }
 
