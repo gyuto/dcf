@@ -17,6 +17,7 @@ const Event = ({ data }) => {
           style={{
             display: "flex",
             justifyContent: "space-between",
+            color: "#555",
           }}
         >
           <div
