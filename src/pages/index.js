@@ -12,7 +12,7 @@ import StudentPropfiles from "../components/student-profiles"
 import Youtube from "../components/home-page-sections/youtube"
 import CenteredBlock from "../components/centered-block"
 import SupportUs from "../components/support-us"
-
+import Events from "../components/events"
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
 import contentMissionStatement from "../content/articles/mission-statement.json"
@@ -45,7 +45,8 @@ const IndexPage = () => {
       />
 
       <Carousel />
-
+      <Events />
+      <Spacer height={40} />
       <Preview
         content={[
           format(contentCharityTour),
