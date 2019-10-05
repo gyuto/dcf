@@ -45,7 +45,7 @@ const IndexPage = () => {
       />
 
       <Carousel />
-      <Events />
+      {/* <Events /> */}
       <Spacer height={40} />
       <Preview
         content={[

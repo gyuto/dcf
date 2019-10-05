@@ -1,7 +1,7 @@
 import React from "react"
 import * as colors from "../../styles/colors"
 
-const Card = ({ children }) => {
+const Card = ({ children, padding }) => {
   return (
     <div
       style={{
@@ -9,7 +9,7 @@ const Card = ({ children }) => {
         boxShadow: "0 0 5px rgba(0,0,0,0.3)",
         borderRadius: "3px",
         position: "relative",
-        padding: "20px 25px",
+        padding: padding || "20px 25px",
       }}
     >
       {children}
