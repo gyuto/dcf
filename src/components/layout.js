@@ -15,37 +15,42 @@ import menuContent from "./menu/content"
 import Footer from "./footer"
 import Spacer from "./spacer"
 import "../styles/layout.css"
+import initFirestore from "../lib/firebase"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+class Layout extends React.Component {
+  render() {
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
           }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Menu content={menuContent} />
-        <div
-          style={{
-            height: 30,
-          }}
-        />
-        {children}
-        <Footer />
-        <Spacer height={30} />
-      </>
-    )}
-  />
-)
+        `}
+        render={data => (
+          <>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <Menu content={menuContent} />
+            <div
+              style={{
+                height: 30,
+              }}
+            />
+            {this.props.children}
+            <Footer />
+            <Spacer height={30} />
+          </>
+        )}
+      />
+    )
+  }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  componentDidMount() {
+    initFirestore()
+  }
 }
 
 export default Layout

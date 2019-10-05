@@ -33,18 +33,19 @@ module.exports = {
         icon: `src/images/logo-favicon-100x100.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Poppins`,
-    //       },
-    //     ],
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          "FIREBASE_API_KEY",
+          "FIREBASE_AUTH_DOMAIN",
+          "FIREBASE_DATABASE_URL",
+          "FIREBASE_PROJECT_ID",
+          "FIREBASE_STORAGE_BUCKET",
+          "FIREBASE_MESSAGING_SENDER_ID",
+          "FIREBASE_APP_ID",
+        ],
+      },
+    },
   ],
 }

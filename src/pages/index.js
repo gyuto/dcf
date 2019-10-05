@@ -12,7 +12,7 @@ import StudentPropfiles from "../components/student-profiles"
 import Youtube from "../components/home-page-sections/youtube"
 import CenteredBlock from "../components/centered-block"
 import SupportUs from "../components/support-us"
-
+import Events from "../components/events"
 import connectContent from "../components/connect/content"
 import contentCharityTour from "../content/articles/charity-tour-2019.json"
 import contentMissionStatement from "../content/articles/mission-statement.json"
@@ -27,80 +27,83 @@ const format = content => ({
     title: getImage(R.path(["pic", "title"], content)),
   },
 })
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      title="Home"
-      keywords={[
-        `gyuto`,
-        `delek`,
-        `children's`,
-        `foundation`,
-        `tibetan`,
-        `tebet`,
-        `nepal`,
-        `Delek Children's Foundation`,
-      ]}
-    />
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO
+        title="Home"
+        keywords={[
+          `gyuto`,
+          `delek`,
+          `children's`,
+          `foundation`,
+          `tibetan`,
+          `tebet`,
+          `nepal`,
+          `Delek Children's Foundation`,
+        ]}
+      />
 
-    <Carousel />
+      <Carousel />
+      {/* <Events /> */}
+      <Spacer height={40} />
+      <Preview
+        content={[
+          format(contentCharityTour),
+          // format(contentMissionStatement),
+          format(contentSponsorUnderprivilegedChildren),
+          format(contentVocationalPrograms),
+        ]}
+        defaultPreviewPic={getImage("cover2")}
+      />
 
-    <Preview
-      content={[
-        format(contentCharityTour),
-        // format(contentMissionStatement),
-        format(contentSponsorUnderprivilegedChildren),
-        format(contentVocationalPrograms),
-      ]}
-      defaultPreviewPic={getImage("cover2")}
-    />
+      {/* <Link to="/mission-statement/">Go to page 2</Link> */}
+      {/* <Newsletter /> */}
+      <Spacer height={50} />
 
-    {/* <Link to="/mission-statement/">Go to page 2</Link> */}
-    {/* <Newsletter /> */}
-    <Spacer height={50} />
-
-    <div
-      style={{
-        borderTop: `1px solid ${colors.brandSecondary}`,
-        borderBottom: `1px solid ${colors.brandSecondary}`,
-        padding: "40px 0",
-      }}
-    >
-      <h2
-        style={{
-          textAlign: "center",
-          color: colors.brandSecondary,
-        }}
-      >
-        Sponsored students
-      </h2>
-      <Spacer height={20} />
-      <StudentPropfiles count={6} />
       <div
         style={{
-          textAlign: "center",
+          borderTop: `1px solid ${colors.brandSecondary}`,
+          borderBottom: `1px solid ${colors.brandSecondary}`,
+          padding: "40px 0",
         }}
       >
-        <a
+        <h2
           style={{
-            color: "#aaa",
+            textAlign: "center",
+            color: colors.brandSecondary,
           }}
-          href="/student-profiles"
         >
-          More student profiles
-        </a>
+          Sponsored students
+        </h2>
+        <Spacer height={20} />
+        <StudentPropfiles count={6} />
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <a
+            style={{
+              color: "#aaa",
+            }}
+            href="/student-profiles"
+          >
+            More student profiles
+          </a>
+        </div>
       </div>
-    </div>
-    <Spacer height={70} />
+      <Spacer height={70} />
 
-    <Youtube />
-    <Spacer height={70} />
+      <Youtube />
+      <Spacer height={70} />
 
-    <SupportUs />
-    <Spacer height={70} />
-    <AddressEtc />
-    <Connect content={connectContent} />
-  </Layout>
-)
+      <SupportUs />
+      <Spacer height={70} />
+      <AddressEtc />
+      <Connect content={connectContent} />
+    </Layout>
+  )
+}
 
 export default IndexPage

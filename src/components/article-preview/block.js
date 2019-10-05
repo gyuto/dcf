@@ -1,21 +1,19 @@
 import React from "react"
-import LinesEllipsis from "react-lines-ellipsis"
+import FadeOutBox from "../fade-out-box"
 import "./article-preview.scss"
 
 const Block = ({ content, defaultPreviewPic }) => {
   return (
-    <a
+    <div
       className="article-preview-block"
       style={{
         boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
         borderRadius: "5px",
         borderBottom: "1px solid #ddd",
-        overflow: "hidden",
         textDecoration: "none",
         color: "#555",
         marginBottom: 20,
       }}
-      href={content.link}
     >
       <div
         style={{
@@ -40,20 +38,32 @@ const Block = ({ content, defaultPreviewPic }) => {
       </h4>
       <div
         style={{
-          height: 200,
+          height: 180,
           padding: "0 30px",
           fontSize: 16,
         }}
       >
-        <LinesEllipsis
-          text={content.main}
-          maxLine={6}
-          ellipsis="..."
-          trimRight
-          basedOn="letters"
-        />
+        <FadeOutBox>{content.main}</FadeOutBox>
       </div>
-    </a>
+      <div
+        style={{
+          height: 10,
+        }}
+      />
+      <a
+        style={{
+          marginLeft: 30,
+        }}
+        href={content.link}
+      >
+        Read more
+      </a>
+      <div
+        style={{
+          height: 30,
+        }}
+      />
+    </div>
   )
 }
 

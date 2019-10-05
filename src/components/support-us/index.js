@@ -5,20 +5,19 @@ import Card from "../card"
 import "./support-us.scss"
 import OneTimeDonation from "./one-time-donation"
 import MonthlySupport from "./monthly-supporter"
-import Spacer from "../spacer"
 
 const Support = ({ children }) => {
   return (
     <CenteredBlock>
       <div className="support-main">
         <div className="donation-card">
-          <Card>
+          <Card padding="30px">
             <h3>Make a one-time donation</h3>
             <OneTimeDonation />
           </Card>
         </div>
         <div className="donation-card">
-          <Card>
+          <Card padding="30px">
             <h3>Become a monthly supporter</h3>
             <MonthlySupport />
           </Card>
