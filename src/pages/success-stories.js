@@ -1,32 +1,8 @@
 import React from "react"
-import * as R from "ramda"
 import Layout from "../components/layout"
-import Carousel from "../components/carousel"
 import SEO from "../components/seo"
 import Preview from "../components/article-preview"
-import getImage from "../images/get-image"
-import Connect from "../components/connect"
-import AddressEtc from "../components/address-etc"
-import Spacer from "../components/spacer"
-import StudentPropfiles from "../components/student-profiles"
-import Youtube from "../components/home-page-sections/youtube"
-import CenteredBlock from "../components/centered-block"
-import SupportUs from "../components/support-us"
-import Events from "../components/events"
-import connectContent from "../components/connect/content"
-import contentCharityTour from "../content/articles/charity-tour-2019.json"
-import contentMissionStatement from "../content/articles/mission-statement.json"
-import contentSponsorUnderprivilegedChildren from "../content/articles/sponsor-underprivileged-children.json"
-import contentVocationalPrograms from "../content/articles/vocational-programs.json"
 
-import * as colors from "../styles/colors"
-
-const format = content => ({
-  ...content,
-  pic: {
-    title: getImage(R.path(["pic", "title"], content)),
-  },
-})
 const IndexPage = () => {
   return (
     <Layout>
@@ -76,15 +52,15 @@ const IndexPage = () => {
                 "https://firebasestorage.googleapis.com/v0/b/delekchildrens.appspot.com/o/permanent-images%2Fsuccess-stories%2Fsolar-4.jpg?alt=media&token=82066c44-07e2-4ad7-a98c-80d5d5354693",
             },
           },
-          {
-            title: "Lobsang Wangmo Now and Then",
-            link: "/lobsang-wangmo-now-then",
-            main: "Lobsang Wangmo now and then",
-            pic: {
-              title:
-                "https://firebasestorage.googleapis.com/v0/b/delekchildrens.appspot.com/o/permanent-images%2Fsuccess-stories%2Flobsang-wangmo-2.jpg?alt=media&token=28ba3e81-fd08-40b5-9118-468f8d41bd0b",
-            },
-          },
+          //   {
+          //     title: "Lobsang Wangmo Now and Then",
+          //     link: "/lobsang-wangmo-now-then",
+          //     main: "Lobsang Wangmo now and then",
+          //     pic: {
+          //       title:
+          //         "https://firebasestorage.googleapis.com/v0/b/delekchildrens.appspot.com/o/permanent-images%2Fsuccess-stories%2Flobsang-wangmo-2.jpg?alt=media&token=28ba3e81-fd08-40b5-9118-468f8d41bd0b",
+          //     },
+          //   },
           {
             title: "Phurbu Dolma Now and Then",
             link: "/phurbu-dolma-now-then",
