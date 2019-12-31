@@ -5,7 +5,6 @@ export default [
   },
   {
     text: "About us",
-    // link: "/mission-statement",
     children: [
       { text: "Mission statement", link: "/mission-statement" },
       { text: "About founder", link: "/about-founder" },
@@ -17,12 +16,12 @@ export default [
       { text: "Vocational programs", link: "/vocational-programs" },
       { text: "Scholarships", link: "/scholarships" },
       { text: "Charity tours in 2019", link: "/charity-tour-2019" },
+      { text: "Success stories", link: "/success-stories" },
       {
         text: "Student profiles",
         link: "/student-profiles",
       },
     ],
-    // link: "/vocational-programs",
   },
   {
     text: "Support us",

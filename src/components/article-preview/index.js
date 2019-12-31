@@ -1,18 +1,12 @@
 import React from "react"
 import Block from "./block"
 import CenteredBlock from "../centered-block"
+import "./styles.scss"
 
 function Preview({ content, defaultPreviewPic }) {
   return (
     <CenteredBlock>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "100%",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="preview-block-container">
         {content.map(blockContent => {
           return (
             <Block

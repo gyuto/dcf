@@ -1,7 +1,5 @@
 import React from "react"
 import { Carousel as ReactCarousel } from "react-responsive-carousel"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import cover from "../../images/cover.jpg"
 import cover2 from "../../images/cover2.jpg"
