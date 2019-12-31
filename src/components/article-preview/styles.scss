@@ -1,0 +1,12 @@
+.preview-block-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.preview-block-container::after {
+  //   content: "";
+  flex: auto;
+  margin-left: 50px;
+}
