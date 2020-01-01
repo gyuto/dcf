@@ -28,6 +28,10 @@ export default [
             text: "Bhutan tour",
             link: "/bhutan-tour",
           },
+          {
+            text: "Southern India visiting ancient buddhist caves",
+            link: "/south-india-tour",
+          },
         ],
       },
 

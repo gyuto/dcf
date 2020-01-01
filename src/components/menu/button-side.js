@@ -57,7 +57,7 @@ const Button = ({ content }) => {
               backgroundColor: "white",
               width: 270,
               borderTop: `3px solid #666`,
-              marginTop: -48,
+              marginTop: -45,
               marginLeft: 223,
               boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
               borderRadius: 3,
