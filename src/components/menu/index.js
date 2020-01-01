@@ -2,6 +2,7 @@ import React from "react"
 import Button from "./button"
 
 // todo - get current location. disable menu
+
 const Menu = ({ content }) => {
   return (
     <div
@@ -20,20 +21,7 @@ const Menu = ({ content }) => {
               margin: "0 15px",
             }}
           >
-            {m.link || m.children ? (
-              <div key={m.text}>
-                <Button content={m} />
-              </div>
-            ) : (
-              <div
-                key={m.text}
-                style={{
-                  color: "#BBB",
-                }}
-              >
-                {m.text}
-              </div>
-            )}
+            <Button content={m} />
           </div>
         )
       })}

@@ -15,7 +15,26 @@ export default [
     children: [
       { text: "Vocational programs", link: "/vocational-programs" },
       { text: "Scholarships", link: "/scholarships" },
-      { text: "Charity tours in 2019", link: "/charity-tour-2019" },
+
+      {
+        text: "Charity tours",
+        children: [
+          { text: "Charity tours in 2019", link: "/charity-tour-2019" },
+          {
+            text: "Buddhist pilgrimage to India & Nepal",
+            link: "/buddhist-pilgrimage",
+          },
+          {
+            text: "Bhutan tour",
+            link: "/bhutan-tour",
+          },
+          {
+            text: "Southern India visiting ancient buddhist caves",
+            link: "/south-india-tour",
+          },
+        ],
+      },
+
       { text: "Success stories", link: "/success-stories" },
       {
         text: "Student profiles",

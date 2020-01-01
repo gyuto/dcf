@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import SideButton from "./button-side"
 import * as colors from "../../styles/colors"
 
 const Button = ({ content }) => {
@@ -56,9 +55,10 @@ const Button = ({ content }) => {
             style={{
               position: "relative",
               backgroundColor: "white",
-              width: 220,
+              width: 270,
               borderTop: `3px solid #666`,
-              marginTop: 10,
+              marginTop: -45,
+              marginLeft: 223,
               boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
               borderRadius: 3,
               paddingBottom: 5,
@@ -66,7 +66,7 @@ const Button = ({ content }) => {
             }}
           >
             {content.children.map(c => {
-              return !c.children || !c.children.length ? (
+              return (
                 <div
                   style={{
                     width: 220,
@@ -80,19 +80,6 @@ const Button = ({ content }) => {
                   <a href={c.link} key={c.text}>
                     {c.text}
                   </a>
-                </div>
-              ) : (
-                <div
-                  style={{
-                    width: 220,
-                    overflow: "visible",
-                    margin: "20px 0",
-                    paddingLeft: 20,
-                    fontSize: 15,
-                  }}
-                  key={c.text}
-                >
-                  <SideButton content={c} />
                 </div>
               )
             })}
