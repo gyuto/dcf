@@ -34,7 +34,7 @@ const Article = ({ children, content = {} }) => {
       >
         <div
           style={{
-            margin: `0 20px`,
+            width: "100%",
             maxWidth: 960,
           }}
         >

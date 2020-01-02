@@ -39,7 +39,6 @@ const Button = ({ content }) => {
           style={{
             position: "absolute",
             marginLeft: 203,
-            border: "1px solid red",
           }}
           onMouseEnter={() => toggleDropdownState(true)}
           onMouseLeave={() => toggleDropdownState(false)}
