@@ -36,26 +36,11 @@ const Button = ({ content }) => {
 
       {(mouseOverRootButton || mouseOverDropdown) && content.children && (
         <div
-          style={{
-            position: "absolute",
-            marginLeft: 203,
-          }}
+          className="menu-button-side-container"
           onMouseEnter={() => toggleDropdownState(true)}
           onMouseLeave={() => toggleDropdownState(false)}
         >
-          <div
-            style={{
-              position: "relative",
-              backgroundColor: "white",
-              width: 270,
-              borderTop: `3px solid #666`,
-              marginTop: -45,
-              boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
-              borderRadius: 3,
-              paddingBottom: 5,
-              zIndex: 10,
-            }}
-          >
+          <div className="menu-button-side">
             {content.children.map(c => {
               return (
                 <div
