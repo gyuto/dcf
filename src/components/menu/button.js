@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import SideButton from "./button-side"
 import * as colors from "../../styles/colors"
+import "./styles.scss"
 
 const Button = ({ content }) => {
   const [mouseOverRootButton, toggleRootButtonState] = useState(false)
@@ -41,10 +42,7 @@ const Button = ({ content }) => {
 
       {(mouseOverRootButton || mouseOverDropdown) && content.children && (
         <div
-          style={{
-            position: "absolute",
-            marginLeft: -20,
-          }}
+          className="menu-button-container"
           onMouseEnter={() => {
             toggleDropdownState(true)
           }}
@@ -52,19 +50,7 @@ const Button = ({ content }) => {
             toggleDropdownState(false)
           }}
         >
-          <div
-            style={{
-              position: "relative",
-              backgroundColor: "white",
-              width: 220,
-              borderTop: `3px solid #666`,
-              marginTop: 10,
-              boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
-              borderRadius: 3,
-              paddingBottom: 5,
-              zIndex: 10,
-            }}
-          >
+          <div className="menu-button">
             {content.children.map(c => {
               return !c.children || !c.children.length ? (
                 <div

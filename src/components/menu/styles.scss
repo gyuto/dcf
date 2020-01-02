@@ -1,0 +1,53 @@
+@import "../../styles/main.scss";
+
+.menu-button-container {
+  position: absolute;
+  margin-left: -20px;
+  @media screen and (max-width: $break-samall) {
+    margin-left: 0;
+    margin-top: 40px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.menu-button {
+  position: relative;
+  background-color: white;
+  width: 220px;
+  border-top: 3px solid #666;
+  margin-top: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding-bottom: 5px;
+  z-index: 10;
+  @media screen and (max-width: $break-samall) {
+    width: 100%;
+  }
+}
+
+.menu-button-side-container {
+  position: absolute;
+  margin-left: 203px;
+  @media screen and (max-width: $break-samall) {
+    margin-left: 0;
+    margin-top: 110px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.menu-button-side {
+  position: relative;
+  background-color: white;
+  width: 270px;
+  border-top: 3px solid #666;
+  margin-top: -45px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding-bottom: 5px;
+  z-index: 10;
+  @media screen and (max-width: $break-samall) {
+    width: 100%;
+  }
+}
