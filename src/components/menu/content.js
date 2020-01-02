@@ -8,6 +8,28 @@ export default [
     children: [
       { text: "Mission statement", link: "/mission-statement" },
       { text: "About founder", link: "/about-founder" },
+
+      {
+        text: "Past newsletters",
+        children: [
+          {
+            text: "Delek Children’s Foundation First Announcement",
+            link: "/news-letter-for-charity-tour",
+          },
+          {
+            text: "Letter to Members",
+            link: "/letter-to-members",
+          },
+          {
+            text: "Sponsor a teacher in Nepal",
+            link: "/sponsor-a-teacher-in-nepal",
+          },
+          {
+            text: "Updates from DCF",
+            link: "/letter-to-members-2",
+          },
+        ],
+      },
     ],
   },
   {
