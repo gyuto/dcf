@@ -27,12 +27,8 @@ const Button = ({ content }) => {
             cursor: "default",
           }}
           key={content.text}
-          onMouseEnter={() => {
-            toggleRootButtonState(true)
-          }}
-          onMouseLeave={() => {
-            toggleRootButtonState(false)
-          }}
+          onMouseEnter={() => toggleRootButtonState(true)}
+          onMouseLeave={() => toggleRootButtonState(false)}
         >
           {content.text}
         </div>
@@ -42,14 +38,11 @@ const Button = ({ content }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: -20,
+            marginLeft: 203,
+            border: "1px solid red",
           }}
-          onMouseEnter={() => {
-            toggleDropdownState(true)
-          }}
-          onMouseLeave={() => {
-            toggleDropdownState(false)
-          }}
+          onMouseEnter={() => toggleDropdownState(true)}
+          onMouseLeave={() => toggleDropdownState(false)}
         >
           <div
             style={{
@@ -58,7 +51,6 @@ const Button = ({ content }) => {
               width: 270,
               borderTop: `3px solid #666`,
               marginTop: -45,
-              marginLeft: 223,
               boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
               borderRadius: 3,
               paddingBottom: 5,

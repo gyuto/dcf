@@ -6,7 +6,11 @@ import getImage from "../images/get-image"
 
 const Article = ({ children, content = {} }) => {
   return (
-    <>
+    <div
+      style={{
+        maxWidth: "100%",
+      }}
+    >
       {R.path(["pic", "title"], content) && (
         <div
           style={{
@@ -48,7 +52,7 @@ const Article = ({ children, content = {} }) => {
           </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

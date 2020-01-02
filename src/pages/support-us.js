@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <Layout>
       <SEO title="Support us" />
-      <Article content={{ title: "SUPPORT US" }}>
+      <Article content={{ title: "Support us" }}>
         <p>
           Your contribution will change the lives of many children who have very
           few opportunities. Please help us in providing life's most basic
