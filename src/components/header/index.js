@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
     <div className="header-container">
       <img
         width={100}
-        src={process.env.DCF_LOGO}
+        src="https://firebasestorage.googleapis.com/v0/b/delekchildrens.appspot.com/o/permanent-images%2Fgyuto-logo.png?alt=media&token=b4442216-17e0-476b-b4c1-79e89dfb5d00"
         alt="logo"
         style={{
           margin: "0 10px",
