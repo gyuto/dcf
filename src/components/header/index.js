@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import * as colors from "../styles/colors"
+import * as colors from "../../styles/colors"
+import "./styles.scss"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,13 +12,15 @@ const Header = ({ siteTitle }) => (
       boxShadow: "0 3px 5px rgba(0,0,0,0.3)",
     }}
   >
-    <div
-      style={{
-        textAlign: "center",
-        margin: `0 auto`,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+    <div className="header-container">
+      <img
+        width={100}
+        src={process.env.DCF_LOGO}
+        alt="logo"
+        style={{
+          margin: "0 10px",
+        }}
+      />
       <h1
         style={{
           margin: 0,

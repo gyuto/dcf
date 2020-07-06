@@ -35,12 +35,7 @@ const imageList = [
     text: "Educate Himalayan children",
   },
 ]
-const SingleImage = ({ image, index }) => (
-  <>
-    <img src={image.pic} />
-    <p className="legend">{image.text}</p>
-  </>
-)
+const SingleImage = ({ image, index }) => <img src={image.pic} />
 const Carousel = () => (
   <div
     style={{

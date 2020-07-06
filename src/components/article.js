@@ -35,7 +35,7 @@ const Article = ({ children, content = {} }) => {
         <div
           style={{
             width: "100%",
-            maxWidth: 960,
+            maxWidth: 780,
           }}
         >
           {content.title && <h1>{content.title}</h1>}
